@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VALIER - Aksesoris Elegan</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="dark-mode">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <img src="gambar/logonew.jpg" alt="VALIER Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <button class="mode-toggle" id="toggleMode">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Aksesoris Mewah untuk Gaya Eksklusif</h1>
+      <p>Temukan koleksi pilihan yang dirancang untuk keanggunan tanpa batas.</p>
+      <a href="#" class="btn">Lihat Koleksi</a>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section class="products">
+    <h2>Koleksi Terbaru</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="gambar/jam1.jpeg" alt="Cincin">
+        <h3>Jam Tangan Modern</h3>
+        <p>Rp250.000</p>
+      </div>
+      <div class="product-card">
+        <img src="gambar/kalung1.jpeg" alt="Jam Tangan">
+        <h3>Kalung Tengkorang</h3>
+        <p>Rp150.000</p>
+      </div>
+      <div class="product-card">
+        <img src="gambar/gelangpria1.jpeg" alt="Kacamata">
+        <h3>Gelang Pria Titanium</h3>
+        <p>Rp100.000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 VALIER. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mode Toggle Script -->
+  <script>
+    const toggleButton = document.getElementById('toggleMode');
+    const body = document.body;
+
+    function updateMode() {
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️';
+        localStorage.setItem('mode', 'dark');
+      } else {
+        toggleButton.textContent = '🌙';
+        localStorage.setItem('mode', 'light');
+      }
+    }
+
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      updateMode();
+    });
+
+    // Load saved mode
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedMode = localStorage.getItem('mode');
+      if (savedMode === 'light') {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+      }
+      updateMode();
+    });
+  </script>
+</body>
+</html>

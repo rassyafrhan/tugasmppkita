@@ -1,0 +1,238 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111; /* Hitam elegan */
+  color: #eee;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  padding: 20px 0;
+  background-color: #111;
+  border-bottom: 1px solid #333;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #fff;
+}
+.about-section {
+  padding: 60px 20px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #222, #111);
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 18px;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+.btn {
+  background-color: #fff;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Products */
+.products {
+  padding: 60px 0;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+.products h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.product-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.product-card p {
+  font-weight: 500;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #999;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+.footer .socials {
+  margin-top: 10px;
+}
+.footer .socials a {
+  color: #999;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer .socials a:hover {
+  color: #fff;
+}
+
+/* Tambahan umum */
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Mode DARK (default) */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+body.dark-mode .header,
+body.dark-mode .footer {
+  background-color: #111;
+  border-color: #333;
+}
+body.dark-mode .products {
+  background-color: #1a1a1a;
+}
+body.dark-mode nav a {
+  color: #ccc;
+}
+body.dark-mode nav a:hover {
+  color: #fff;
+}
+body.dark-mode .product-card {
+  background-color: #222;
+}
+body.dark-mode .btn {
+  background-color: #fff;
+  color: #111;
+}
+body.dark-mode .btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+body.dark-mode .footer,
+body.dark-mode .footer a {
+  color: #999;
+}
+body.dark-mode .footer a:hover {
+  color: #fff;
+}
+
+/* Mode LIGHT */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #222;
+}
+body.light-mode .header,
+body.light-mode .footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+body.light-mode .products {
+  background-color: #f2f2f2;
+}
+body.light-mode nav a {
+  color: #444;
+}
+body.light-mode nav a:hover {
+  color: #000;
+}
+body.light-mode .product-card {
+  background-color: #fff;
+}
+body.light-mode .btn {
+  background-color: #111;
+  color: #fff;
+}
+body.light-mode .btn:hover {
+  background-color: #333;
+}
+body.light-mode .footer,
+body.light-mode .footer a {
+  color: #666;
+}
+body.light-mode .footer a:hover {
+  color: #000;
+}

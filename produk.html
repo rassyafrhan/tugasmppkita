@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produk - VALIER</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container header-content">
+      <h1 class="logo"><a href="index.html">VALIER</a></h1>
+      <nav class="nav">
+        <a href="index.html">Beranda</a>
+        <a href="produk.html" class="active">Produk</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="tentang.html">Tentang</a>
+        <button class="mode-toggle" id="toggleMode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Produk -->
+  <section class="produk-section">
+    <div class="container">
+      <h2>Koleksi Aksesoris Kami</h2>
+      <div class="produk-grid">
+        <!-- Produk 1 -->
+        <div class="produk-item">
+          <img src="img/produk1.jpg" alt="Cincin Elegan" />
+          <h3>Cincin Elegan</h3>
+          <p>Rp 120.000</p>
+        </div>
+
+        <!-- Produk 2 -->
+        <div class="produk-item">
+          <img src="img/produk2.jpg" alt="Gelang Minimalis" />
+          <h3>Gelang Minimalis</h3>
+          <p>Rp 95.000</p>
+        </div>
+
+        <!-- Produk 3 -->
+        <div class="produk-item">
+          <img src="img/produk3.jpg" alt="Kalung Modern" />
+          <h3>Kalung Modern</h3>
+          <p>Rp 150.000</p>
+        </div>
+
+        <!-- Produk 4 -->
+        <div class="produk-item">
+          <img src="img/produk4.jpg" alt="Anting Geometris" />
+          <h3>Anting Geometris</h3>
+          <p>Rp 80.000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 VALIER. All rights reserved.</p>
+  </footer>
+
+  <!-- Script Dark Mode -->
+  <script>
+    const toggleBtn = document.getElementById("toggleMode");
+    const body = document.body;
+
+    function setMode() {
+      if (body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("mode", "dark");
+      } else {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("mode", "light");
+      }
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+      setMode();
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = localStorage.getItem("mode");
+      if (saved === "light") {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+      }
+      setMode();
+    });
+  </script>
+</body>
+</html>
